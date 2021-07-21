@@ -8,7 +8,7 @@
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-																																																																																																																												           and uncomment the following Encore helpers to start using Symfony UX #}
+																																																																																																																																																										           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{#{{ encore_entry_link_tags('app') }}#}
 			<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -117,11 +117,11 @@
 						<div
 							class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 							<!-- Content -->
-							<h6 class="text-uppercase fw-bold mb-4">
+							<h6 class="text-uppercase fw-bold mb-4" style="text-decoration: underline overline #FF3028;">
 								<i class="fas fa-gem me-3"></i>
 								RentCar
 							</h6>
-							<p>RentCar est un acteur incontournable de la location voiture et location utilitaire. Déménagement, déplacement professionnel, départ en vacances, location occasionnelle.
+							<p class="fw-bold">RentCar est un acteur incontournable de la location voiture et location utilitaire. Déménagement, déplacement professionnel, départ en vacances, location occasionnelle.
 							</p>
 						</div>
 						<!-- Grid column -->
@@ -132,6 +132,7 @@
 							<!-- Links -->
 							<h6 class="text-uppercase fw-bold mb-4">
 								Nos Services
+								<span class="animate-border border-black col-md-2 col-lg-2 col-xl-2 mx-auto"></span>
 							</h6>
 							<p>
 								<a href="#!" class="text-reset">Location de voitures</a>
@@ -154,6 +155,7 @@
 							<!-- Links -->
 							<h6 class="text-uppercase fw-bold mb-4">
 								Infos pratiques
+								<span class="animate-border border-black col-md-3 col-lg-2 col-xl-2 mx-auto"></span>
 							</h6>
 							<p>
 								<a href="#!" class="text-reset">Conditions générales</a>
@@ -176,6 +178,7 @@
 							<!-- Links -->
 							<h6 class="text-uppercase fw-bold mb-4">
 								Contact
+								<span class="animate-border border-black col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0"></span>
 							</h6>
 							<p>
 								<i class="fas fa-home me-3"></i>
@@ -200,7 +203,7 @@
 			<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
 				© 2021 Copyright
 				<a class="text-reset fw-bold">
-					| AMRI | All Right reserved</a>
+					| AMRI | All Right Reserved</a>
 			</div>
 			<!-- Copyright -->
 		</footer>
