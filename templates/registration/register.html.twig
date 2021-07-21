@@ -1,17 +1,76 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription
+{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+	<section class="get-in-touch">
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+		<h1 class="title">Inscription</h1>
+
+
+		{{ form_start(registrationForm, {'attr': {'class': 'contact-form row'}}) }}
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.lastName, {'attr': {'placeholder': 'Nom  ', 'class':'input-text js-input', 'id':'lastName'}}) }}
+			<span class="error">{{ form_errors(registrationForm.lastName) }}</span>
+		</div>
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.firstName, {'attr': {'placeholder': 'Prénom  ', 'class':'input-text js-input', 'id':'firstName'}}) }}
+			<span class="error">{{ form_errors(registrationForm.firstName) }}</span>
+		</div>
+
+		<div class="form-field col-lg-6">
+			{{ form_label(registrationForm.birthDate,'Date de naissance') }}
+			{{ form_widget(registrationForm.birthDate, {'attr': {'placeholder': 'Date de naissance', 'class':'input-text js-input', 'id':'birthDateName'}}) }}
+			<span class="error">{{ form_errors(registrationForm.birthDate) }}</span>
+		</div>
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.phoneNumber, {'attr': {'placeholder': 'Téléphone', 'class':'input-text js-input', 'id':'phoneNumber'}}) }}
+			<span class="error">{{ form_errors(registrationForm.phoneNumber) }}</span>
+		</div>
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.adress, {'attr': {'placeholder': 'Adresse', 'class':'input-text js-input', 'id':'adress'}}) }}
+			<span class="error">{{ form_errors(registrationForm.adress) }}</span>
+		</div>
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.city, {'attr': {'placeholder': 'Ville', 'class':'input-text js-input', 'id':'city'}}) }}
+			<span class="error">{{ form_errors(registrationForm.city) }}</span>
+		</div>
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.zipCode, {'attr': {'placeholder': 'Code postale', 'class':'input-text js-input', 'id':'zipCode'}}) }}
+			<span class="error">{{ form_errors(registrationForm.zipCode) }}</span>
+		</div>
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.country, {'attr': {'placeholder': 'Pays', 'class':'input-text js-input', 'id':'country'}}) }}
+			<span class="error">{{ form_errors(registrationForm.country) }}</span>
+		</div>
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.email, {'attr': {'placeholder': 'Votre E-mail', 'class':'input-text js-input', 'id':'email'}}) }}
+			<span class="error">{{ form_errors(registrationForm.email) }}</span>
+		</div>
+
+
+		<div class="form-field col-lg-6">
+			{{ form_widget(registrationForm.plainPassword, {'attr': {'placeholder': 'Votre password', 'class':'input-text js-input', 'id':'password'}}) }}
+			<span class="error">{{ form_errors(registrationForm.plainPassword) }}</span>
+		</div>
+
+
+		<div class="form-field col-lg-12">
+			<input class="submit-btn" type="submit" value="M'inscrire">
+		</div>
+
+		{{ form_end(registrationForm) }}
+
+
+	</section>
 {% endblock %}
