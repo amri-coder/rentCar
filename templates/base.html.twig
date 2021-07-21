@@ -8,11 +8,12 @@
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-																																																																														           and uncomment the following Encore helpers to start using Symfony UX #}
+																																																																																																																												           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{#{{ encore_entry_link_tags('app') }}#}
 			<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 			<link href="{{ asset('assets/css/index.css') }}" type="text/css" rel="stylesheet"/>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 		{% endblock %}
 
 		{% block javascripts %}
@@ -117,11 +118,10 @@
 							class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 							<!-- Content -->
 							<h6 class="text-uppercase fw-bold mb-4">
-								<i class="fas fa-gem me-3"></i>RentCar
+								<i class="fas fa-gem me-3"></i>
+								RentCar
 							</h6>
-							<p>
-								Here you can use rows and columns to organize your footer content. Lorem ipsum
-																																								            dolor sit amet, consectetur adipisicing elit.
+							<p>RentCar est un acteur incontournable de la location voiture et location utilitaire. Déménagement, déplacement professionnel, départ en vacances, location occasionnelle.
 							</p>
 						</div>
 						<!-- Grid column -->
@@ -131,19 +131,19 @@
 							class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 							<!-- Links -->
 							<h6 class="text-uppercase fw-bold mb-4">
-								Products
+								Nos Services
 							</h6>
 							<p>
-								<a href="#!" class="text-reset">Angular</a>
+								<a href="#!" class="text-reset">Location de voitures</a>
 							</p>
 							<p>
-								<a href="#!" class="text-reset">React</a>
+								<a href="#!" class="text-reset">Location d'utilitaires</a>
 							</p>
 							<p>
-								<a href="#!" class="text-reset">Vue</a>
+								<a href="#!" class="text-reset">Location en aller simple</a>
 							</p>
 							<p>
-								<a href="#!" class="text-reset">Laravel</a>
+								<a href="#!" class="text-reset">Location sans permis</a>
 							</p>
 						</div>
 						<!-- Grid column -->
@@ -153,19 +153,19 @@
 							class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 							<!-- Links -->
 							<h6 class="text-uppercase fw-bold mb-4">
-								Useful links
+								Infos pratiques
 							</h6>
 							<p>
-								<a href="#!" class="text-reset">Pricing</a>
+								<a href="#!" class="text-reset">Conditions générales</a>
 							</p>
 							<p>
-								<a href="#!" class="text-reset">Settings</a>
+								<a href="#!" class="text-reset">Aide en ligne</a>
 							</p>
 							<p>
-								<a href="#!" class="text-reset">Orders</a>
+								<a href="#!" class="text-reset">Bons plans</a>
 							</p>
 							<p>
-								<a href="#!" class="text-reset">Help</a>
+								<a href="#!" class="text-reset">Plan de site</a>
 							</p>
 						</div>
 						<!-- Grid column -->
@@ -179,17 +179,15 @@
 							</h6>
 							<p>
 								<i class="fas fa-home me-3"></i>
-								New York, NY 10012, US</p>
+								Avenue de fouilleuse, 92500 Rueil Malmaison, Fr</p>
 							<p>
 								<i class="fas fa-envelope me-3"></i>
-								info@example.com
+								amri.site@yahoo.com
 							</p>
 							<p>
 								<i class="fas fa-phone me-3"></i>
-								+ 01 234 567 88</p>
-							<p>
-								<i class="fas fa-print me-3"></i>
-								+ 01 234 567 89</p>
+								+ 33 (0)6 52 96 02 44</p>
+
 						</div>
 						<!-- Grid column -->
 					</div>
@@ -200,8 +198,9 @@
 
 			<!-- Copyright -->
 			<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-				© 2021 Copyright:
-				<a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+				© 2021 Copyright
+				<a class="text-reset fw-bold">
+					| AMRI | All Right reserved</a>
 			</div>
 			<!-- Copyright -->
 		</footer>

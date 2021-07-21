@@ -19,14 +19,14 @@
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
   }
-  nav {
+  nav, footer {
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 48px;
     padding-bottom: 48px;
-       color: #5543ca;
+    color: #5543ca;
       background: #5543ca;
       background: -moz-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
       background: -webkit-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
