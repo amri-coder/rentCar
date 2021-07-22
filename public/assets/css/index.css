@@ -4,7 +4,7 @@
     position: relative;
   
   }
-  .get-in-touch .title{
+  .get-in-touch .title, .title{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
