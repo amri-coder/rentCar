@@ -65,7 +65,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Ajout', 'fas fa-user-plus', Fleet::class)->setAction('new');
 
 
-        yield MenuItem::section('Nombre de place');
+        yield MenuItem::section('Nombre de place : Sièges');
         yield MenuItem::linkToCrud('Liste', 'fas fa-truck-loading', Seats::class);
         yield MenuItem::linkToCrud('Ajout', 'fas fa-user-plus', Seats::class)->setAction('new');
 
