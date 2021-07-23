@@ -39,7 +39,7 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
-     * @Assert\NotBlank
+     * 
      */
     private $password;
 
@@ -137,6 +137,7 @@ class User implements UserInterface
 
     /**
      * @see UserInterface
+     * 
      */
     public function getPassword(): string
     {

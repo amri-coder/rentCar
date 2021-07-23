@@ -44,11 +44,6 @@ class Cars
      */
     private $gears;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Engines::class)
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $engines;
 
     /**
      * @ORM\ManyToOne(targetEntity=Seats::class)
@@ -61,6 +56,11 @@ class Cars
      * @ORM\JoinColumn(nullable=false)
      */
     private $fleets;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Engines::class, inversedBy="cars")
+     */
+    private $engine;
 
     public function getId(): ?int
     {
@@ -127,17 +127,6 @@ class Cars
         return $this;
     }
 
-    public function getEngines(): ?Engines
-    {
-        return $this->engines;
-    }
-
-    public function setEngines(?Engines $engines): self
-    {
-        $this->engines = $engines;
-
-        return $this;
-    }
 
     public function getSeats(): ?Seats
     {
@@ -159,6 +148,18 @@ class Cars
     public function setFleets(?Fleet $fleets): self
     {
         $this->fleets = $fleets;
+
+        return $this;
+    }
+
+    public function getEngine(): ?Engines
+    {
+        return $this->engine;
+    }
+
+    public function setEngine(?Engines $engine): self
+    {
+        $this->engine = $engine;
 
         return $this;
     }
