@@ -80,4 +80,8 @@ class Engines
 
         return $this;
     }
+    public function __toString()
+    {
+        return $this->engine;
+    }
 }

@@ -2,24 +2,24 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Engines;
+use App\Entity\Fleet;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
-class EnginesCrudController extends AbstractCrudController
+class FleetCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Engines::class;
+        return Fleet::class;
     }
 
-
+    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-
-            TextField::new('Engine', 'Moteur'),
-
+            IdField::new('id'),
+            TextField::new('title'),
+            TextEditorField::new('description'),
         ];
     }
+    */
 }

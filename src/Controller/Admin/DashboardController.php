@@ -6,7 +6,10 @@ use App\Entity\User;
 use App\Entity\Cars;
 use App\Entity\Rental;
 use App\Entity\Brands;
+use App\Entity\Engines;
 use App\Entity\Gears;
+use App\Entity\Fleet;
+use App\Entity\Seats;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Config\UserMenu;
@@ -50,6 +53,21 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Boîte de vitesse');
         yield MenuItem::linkToCrud('Liste', 'fas fa-truck-loading', Gears::class);
         yield MenuItem::linkToCrud('Ajout', 'fas fa-user-plus', Gears::class)->setAction('new');
+
+
+        yield MenuItem::section('Moteur');
+        yield MenuItem::linkToCrud('Liste', 'fas fa-truck-loading', Engines::class);
+        yield MenuItem::linkToCrud('Ajout', 'fas fa-user-plus', Engines::class)->setAction('new');
+
+
+        yield MenuItem::section('Flotte');
+        yield MenuItem::linkToCrud('Liste', 'fas fa-truck-loading', Fleet::class);
+        yield MenuItem::linkToCrud('Ajout', 'fas fa-user-plus', Fleet::class)->setAction('new');
+
+
+        yield MenuItem::section('Nombre de place');
+        yield MenuItem::linkToCrud('Liste', 'fas fa-truck-loading', Seats::class);
+        yield MenuItem::linkToCrud('Ajout', 'fas fa-user-plus', Seats::class)->setAction('new');
 
         yield MenuItem::section('Voitures');
         yield MenuItem::linkToCrud('Liste', 'fas fa-car', Cars::class);
