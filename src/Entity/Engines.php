@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\EnginesRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -24,15 +22,8 @@ class Engines
      */
     private $engine;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Cars::class, mappedBy="engine")
-     */
-    private $cars;
 
-    public function __construct()
-    {
-        $this->cars = new ArrayCollection();
-    }
+
 
     public function getId(): ?int
     {
@@ -51,35 +42,6 @@ class Engines
         return $this;
     }
 
-    /**
-     * @return Collection|Cars[]
-     */
-    public function getCars(): Collection
-    {
-        return $this->cars;
-    }
-
-    public function addCar(Cars $car): self
-    {
-        if (!$this->cars->contains($car)) {
-            $this->cars[] = $car;
-            $car->setEngine($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCar(Cars $car): self
-    {
-        if ($this->cars->removeElement($car)) {
-            // set the owning side to null (unless already changed)
-            if ($car->getEngine() === $this) {
-                $car->setEngine(null);
-            }
-        }
-
-        return $this;
-    }
     public function __toString()
     {
         return $this->engine;

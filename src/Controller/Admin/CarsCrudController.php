@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
 use phpDocumentor\Reflection\Types\Float_;
 
 class CarsCrudController extends AbstractCrudController
@@ -22,15 +23,15 @@ class CarsCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
+            IdField::new('id')->hideOnForm(),
             TextField::new('registrationNumber', 'Numéro d\'immatriculation'),
-            AssociationField::new('engine', 'Moteur'),
             AssociationField::new('brands', 'Marques'),
             AssociationField::new('fleets', 'Flotte'),
             AssociationField::new('gears', 'Boîte de vitesse'),
             AssociationField::new('seats', 'Nombre de places'),
             BooleanField::new('availability', 'Disponibilité'),
-            TextField::new('price', 'Prix'),
+            MoneyField::new('price', 'prix')->setCurrency('EUR'),
+            AssociationField::new('engine', 'Moteur'),
 
 
         ];

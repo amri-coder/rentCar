@@ -163,4 +163,8 @@ class Cars
 
         return $this;
     }
+    public function __toString()
+    {
+        return $this->price;
+    }
 }
