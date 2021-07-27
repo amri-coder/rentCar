@@ -8,7 +8,7 @@
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-																																																																																																																																																										           and uncomment the following Encore helpers to start using Symfony UX #}
+																																																																																																																																																																						           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{#{{ encore_entry_link_tags('app') }}#}
 			<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">rentCar</a>
+			<a class="navbar-brand" href="{{path('home')}}">rentCar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -39,7 +39,7 @@
 						</li>
 					{% endif %}
 					<li class="nav-item {{ app.request.get('_route') == 'homepage' ? 'active' : '' }}">
-						<a class="nav-link" href="#">Accueil</a>
+						<a class="nav-link" href="{{path('home')}}">Accueil</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Liste des véhicules</a>

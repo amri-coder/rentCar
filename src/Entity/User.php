@@ -41,7 +41,7 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      * 
      */
-    private $password;
+    private $password = '';
 
     /**
      * @ORM\Column(type="string", length=50)
