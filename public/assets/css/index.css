@@ -19,6 +19,19 @@
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
   }
+  .title1{
+    text-align: center;
+    text-transform: uppercase;
+    
+    padding-bottom: 48px;
+       color: #5543ca;
+      background: #5543ca;
+      background: -moz-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
+      background: -webkit-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
+      background: linear-gradient(to right,#f4524d  0%,#5543ca  100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+  }
   nav {
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
