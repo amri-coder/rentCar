@@ -9,8 +9,10 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
 use phpDocumentor\Reflection\Types\Float_;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class CarsCrudController extends AbstractCrudController
 {
@@ -24,6 +26,12 @@ class CarsCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm(),
+            TextField::new('imageFile')
+                ->setFormType(VichImageType::class)
+                ->hideOnIndex(),
+            ImageField::new('image')
+                ->setBasePath('/assets/img/')
+                ->onlyOnIndex(),
             TextField::new('registrationNumber', 'Numéro d\'immatriculation'),
             AssociationField::new('brands', 'Marques'),
             AssociationField::new('fleets', 'Flotte'),
