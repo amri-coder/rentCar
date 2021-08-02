@@ -4,6 +4,67 @@
 {% endblock %}
 
 {% block body %}
-	{{dump(cars)}}
 
-{% endblock %}
+	<div class="container">
+
+
+		<div class="card-deck text-center">
+			{% for car in cars %}
+				<div class="card rounded shadow-lg">
+
+					<img class="card-img-top" src="{{asset('assets/img/')}}{{car.image}}" alt="{{car.image}}">
+					<div class="card-body">
+						<h5 class="card-title text-uppercase font-weight-bold">{{car.brands}}</h5>
+						<p class="card-text">
+							<ul class="list-group list-group-flush font-weight-light">
+								<li class="list-group-item">
+									Disponibilité :
+									{{car.availability}}
+								</li>
+								<li class="list-group-item">
+									Numéro d'immatriculation :
+									{{car.registrationNumber}}
+								</li>
+
+								<li class="list-group-item">
+									Marques :
+									{{car.brands}}
+								</li>
+								<li class="list-group-item">
+									Flotte :
+									{{car.fleets}}
+								</li>
+								<li class="list-group-item">
+									Moteur :
+									{{car.engine}}
+								</li>
+								<li class="list-group-item">
+									Boîte de vitesse :
+									{{car.gears}}
+								</li>
+								<li class="list-group-item">
+									Nombre de places :
+									{{car.seats}}
+								</li>
+								<ul>
+
+									<p>
+										prix :
+										{{car.price}}
+									</p>
+								</p>
+							</div>
+
+							<div class="text-center mb-4">
+								<button class="btn btn-primary">Détails</button>
+								<button class="btn btn-secondary">Réserver</button>
+							</div>
+						</p>
+					</div>
+				{% endfor %}
+			</div>
+
+
+		</div>
+
+	{% endblock %}
